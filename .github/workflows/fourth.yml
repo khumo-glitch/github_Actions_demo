@@ -1,5 +1,5 @@
 name: Fouth workflow demo
-on: [workflow _dispatch,pull_request]
+on: [workflow _dispatch, push]
 jobs:
   show infot:
     runs-on: Ubuntu-latest
