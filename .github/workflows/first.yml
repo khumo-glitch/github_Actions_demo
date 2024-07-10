@@ -8,3 +8,8 @@ jobs:
         run: echo "Hello World!"
       - name: bit o' wisdom
         run: echo "never eat yellow snow"
+      - name: Combo Execute
+        run:
+          echo "Hello World"
+          echo "never eat yellow snow"
+        
