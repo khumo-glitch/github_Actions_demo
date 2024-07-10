@@ -1,10 +1,6 @@
 name: Fouth workflow demo
 on: 
-<<<<<<< HEAD
   workflow_dispatch:
-=======
-  workflow _dispatch:
->>>>>>> 4b37ca7cbf0a7b29e865da64fd041b51b5cef1c4
   pull_request:
     types: [opened, synchronize]
 jobs:
