@@ -1,6 +1,6 @@
 name: Fouth workflow demo
 on: 
-  workflow _dispatch:
+  workflow_dispatch:
   pull_request:
     types: [opened, synchronize]
 jobs:
@@ -9,4 +9,5 @@ jobs:
     steps: 
         - name: Output Info
           run: echo"${{ toJSON(github) }}"
+    
     

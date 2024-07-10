@@ -19,5 +19,3 @@ jobs:
           run: |
             python3 -c "import requests; r=requests.get('http://localhost:8080'); print(r.status_code)" 
             curl -s localhost:8080
-
-        
