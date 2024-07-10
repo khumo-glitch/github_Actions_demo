@@ -7,4 +7,4 @@ jobs:
       - name: Hello World
         run: echo "Hello World!"
       - name: bit o' wisdom
-        runs: echo "never eat yellow snow"
+        run: echo "never eat yellow snow"
