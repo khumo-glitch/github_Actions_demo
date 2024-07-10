@@ -1,9 +1,12 @@
 name: Fouth workflow demo
-on: [workflow _dispatch, push]
+on: 
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize]
 jobs:
-  show infot:
-    runs-on: Ubuntu-latest
+  show-info:
+    runs-on: ubuntu-latest
     steps: 
-        - name: Output Infor
+        - name: Output Info
           run: echo"${{ toJSON(github) }}"
     

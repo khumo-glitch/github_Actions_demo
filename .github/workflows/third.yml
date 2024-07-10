@@ -1,22 +1,21 @@
 name: third workflow demo
 on: [push,pull_request]
 jobs:
-  code checkout:
-    runs-on: Ubuntu-latest
+  code-checkout:
+    runs-on: ubuntu-latest
     steps: 
         - name: Checkout code
           uses: actions/checkout@v4
   nginx-deploy-test:  
     needs: [code-checkout]
-    runs-on: Ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
         - name: Download container for Testing
-          run:
+          run: |
             docker image pull nginx
             docker image ls 
             docker container run -d -p 8080:80 nginx 
         - name: Test Web Deployment with Python
-          run:
-            python3 -c "import requests; r=requests.get('http://localhost:8080'); print(r.status_code)" curl -s localhost:8080
-
-        
+          run: |
+            python3 -c "import requests; r=requests.get('http://localhost:8080'); print(r.status_code)" 
+            curl -s localhost:8080    
