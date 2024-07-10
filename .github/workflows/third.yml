@@ -1,12 +1,15 @@
 name: third workflow demo
 on: [push,pull_request]
 jobs:
-  nginx-deploy-test:
+  code checkout:
     runs-on: Ubuntu-latest
     steps: 
         - name: Checkout code
           uses: actions/checkout@v4
-        - name: Deploy a container for Testing
+  nginx-deploy-test:  
+    runs-on: Ubuntu-latest
+    steps:
+        - name: Download container for Testing
           run:
             docker image pull nginx
             docker image ls 
