@@ -18,4 +18,10 @@ jobs:
         - name: Test Web Deployment with Python
           run: |
             python3 -c "import requests; r=requests.get('http://localhost:8080'); print(r.status_code)" 
+<<<<<<< HEAD
             curl -s localhost:8080    
+=======
+            curl -s localhost:8080
+
+        
+>>>>>>> 4b37ca7cbf0a7b29e865da64fd041b51b5cef1c4
