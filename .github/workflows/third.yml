@@ -7,6 +7,7 @@ jobs:
         - name: Checkout code
           uses: actions/checkout@v4
   nginx-deploy-test:  
+    needs: [code-checkout]
     runs-on: Ubuntu-latest
     steps:
         - name: Download container for Testing
