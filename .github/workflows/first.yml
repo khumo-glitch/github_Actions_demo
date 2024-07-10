@@ -1,0 +1,10 @@
+name: first workflow demo
+on: workflow_dispatch
+jobs:
+  my_first_workflow_job:
+    runs-on: Ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo "Hello World!"
+      - name: bit o' wisdom
+        runs: echo "never eat yellow snow"
